@@ -1,16 +1,5 @@
-const $ = document.querySelector.bind(document);
-
-const handleRepo = () => {
-  $('.octicon-repo-forked')
-};
-
-const handleCompare = () => {
-
-};
-
-const isRepoRegex = /https:\/\/github\.com\/[^/]+\/[^/?#\s]+([?#]\S+)?/i;
-// capture groups: 1. upstream org; 2. source org
-const isCompareRegex = /https:\/\/github\.com\/([^/]+)\/[^/]+\/compare\/[^.]+\.{3}([^:]+):[^:]+:[^?#]+([?#]\S+)?/i;
+import { handleRepo, isRepoRegex  } from "./handlers/repo";
+import { handleCompare, isCompareRegex } from "./handlers/compare";
 
 const current = window.location.href;
 if (isRepoRegex.test(current)) handleRepo()

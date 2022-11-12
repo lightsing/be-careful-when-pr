@@ -23,7 +23,6 @@ const config: Configuration = {
         ],
     },
     externals: {
-        axios: "axios",
     },
     optimization: {
         minimize: false,

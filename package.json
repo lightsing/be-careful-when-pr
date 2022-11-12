@@ -12,14 +12,15 @@
     "url": "git+https://github.com/lightsing/be-careful-when-pr.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "lightsing",
   "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/lightsing/be-careful-when-pr/issues"
   },
   "homepage": "https://github.com/lightsing/be-careful-when-pr#readme",
   "devDependencies": {
-    "@types/node": "^16.18.3",
+    "@types/jquery": "^3.5.14",
+    "@types/node": "^18.11.9",
     "@types/prettier": "^2.7.1",
     "@types/tampermonkey": "^4.0.5",
     "@types/webpack": "^5.28.0",
@@ -32,17 +33,17 @@
     "webpack-cli": "^4.10.0"
   },
   "userscript": {
-    "require-template": "https://cdn.jsdelivr.net/npm/${dependencyName}@${dependencyVersion}",
     "namespace": "https://github.com/lightsing/be-careful-when-pr/",
-    "author": "lightsing",
     "license": "https://opensource.org/licenses/AGPL-3.0",
     "match": [
-      "https://github.com*"
+      "https://github.com/*"
     ],
     "connect": [],
     "require": [],
     "grant": [],
     "exclude": [],
     "resources": []
+  },
+  "dependencies": {
   }
 }
