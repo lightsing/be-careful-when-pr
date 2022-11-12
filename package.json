@@ -1,42 +1,41 @@
 {
-  "name": "userscript-typescript-template",
-  "version": "1.1.0",
-  "description": "Template repo using Webpack and TypeScript to build your userscript for Tampermonkey and more extensions.",
+  "name": "be-careful-when-pr",
+  "version": "0.1.0",
+  "description": "Visually warn you when you are going to open a pr to upstream.",
   "main": "userscript/index.user.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "build:watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pboymt/userscript-typescript-template.git"
+    "url": "git+https://github.com/lightsing/be-careful-when-pr.git"
   },
   "keywords": [],
   "author": "",
-  "license": "MIT",
+  "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/pboymt/userscript-typescript-template/issues"
+    "url": "https://github.com/lightsing/be-careful-when-pr/issues"
   },
-  "homepage": "https://github.com/pboymt/userscript-typescript-template#readme",
+  "homepage": "https://github.com/lightsing/be-careful-when-pr#readme",
   "devDependencies": {
-    "@types/node": "^16.11.10",
-    "@types/prettier": "^2.7.0",
+    "@types/node": "^16.18.3",
+    "@types/prettier": "^2.7.1",
     "@types/tampermonkey": "^4.0.5",
     "@types/webpack": "^5.28.0",
-    "axios-userscript-adapter": "^0.1.12",
     "prettier": "^2.7.1",
     "terser-webpack-plugin": "^5.3.6",
-    "ts-loader": "^9.2.6",
-    "ts-node": "^10.4.0",
-    "typescript": "^4.5.2",
-    "webpack": "^5.64.3",
-    "webpack-cli": "^4.9.1"
+    "ts-loader": "^9.4.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0"
   },
   "userscript": {
     "require-template": "https://cdn.jsdelivr.net/npm/${dependencyName}@${dependencyVersion}",
-    "namespace": "http://tampermonkey.net/",
-    "license": "https://opensource.org/licenses/MIT",
+    "namespace": "https://github.com/lightsing/be-careful-when-pr/",
+    "author": "lightsing",
+    "license": "https://opensource.org/licenses/AGPL-3.0",
     "match": [
       "https://github.com*"
     ],
@@ -45,8 +44,5 @@
     "grant": [],
     "exclude": [],
     "resources": []
-  },
-  "dependencies": {
-    "axios": "^0.27.2"
   }
 }
